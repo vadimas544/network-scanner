@@ -1,6 +1,24 @@
 #This is a network  scanner
 
 import scapy.all as scapy
+import optparse
+
+def get_args():
+    
+    # Create a parser object (instance of a class OptionParser)
+    parser = optparse.OptionParser()
+
+    # Option that parser is expect from user
+    parser.add_option("-n", "--network", dest="network", help="Network for scan IP addresses")
+
+    (options, arguments) = parser.parse_args()
+
+    if not options.network:
+        parser.error("[-] Please specify a network, use --help for more info")
+
+    return options
+
+
 
 def scan(ip):
     #Create a ARP frame
@@ -28,5 +46,6 @@ def scan(ip):
     #result_list = [list_header, list_item]
     file.close()
 
-if __name__ == '__main__':
-    scan("10.6.2.1/24")
+
+options = get_args()
+scan(options)
