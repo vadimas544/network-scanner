@@ -1,0 +1,5 @@
+IP			MACAddress
+192.168.203.1		00:50:56:c0:00:08IP			MACAddress
+192.168.203.2		00:50:56:ed:bc:4aIP			MACAddress
+192.168.203.135		00:0c:29:53:7f:e8IP			MACAddress
+192.168.203.254		00:50:56:fd:22:23

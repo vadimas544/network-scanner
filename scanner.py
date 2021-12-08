@@ -48,4 +48,4 @@ def scan(ip):
 
 
 options = get_args()
-scan(options)
+scan(options.network)
